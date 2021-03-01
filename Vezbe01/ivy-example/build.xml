@@ -28,8 +28,13 @@
 		<target name="resolve" description="resolve dependencies with ivy" depends="init">
 			  <ivy:resolve />
 		</target>
+	
+		<target name="retrieve" description="ivy:retrieve" depends="resolve">
+			<ivy:retrieve sync="true" type="jar" />
+		</target>
+	
 
-		<target name="compile" depends="init">
+		<target name="compile" depends="retrieve">
 			<javac srcdir="${src}" destdir="${build}" classpathref="classpath">
 			</javac>
 		</target>
