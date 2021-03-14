@@ -76,7 +76,7 @@ Ovo znači - ukoliko se sa klijentske strane prosledi objekat koji nema atribut 
 * instalirati sve dependency-je iz pom.xml
 * desni klik na projekat -> Run as -> Java Application / Spring Boot app (ako je instaliran STS plugin sa Eclipse marketplace)
 * automatski će se pokrenuti Tomcat i zatim odraditi deploy aplikacije - u konzoli možete ispratiti ispis
-* kada se aplikacija pokrene, u browser-u navigirati URL <http://localhost:8080/myapp/greetings>
+* kada se aplikacija pokrene, u browser-u navigirati URL <http://localhost:8081/myapp/greetings>
 
 ## validation-example
 
