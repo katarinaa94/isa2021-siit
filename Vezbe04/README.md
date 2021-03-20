@@ -1,4 +1,4 @@
-# Vežbe 3
+# Vežbe 4
 
 ## jpa-example
 
@@ -11,7 +11,7 @@ Za potrebe razumevanja primera potrebno je prethodno odgledati predavanja:
 * [ORM: Mapiranje nasleđivanja](https://www.youtube.com/watch?v=KMKmYUnzPqM)
 * [ORM: izbor primarnih ključeva](https://www.youtube.com/watch?v=D7Ae7qENK98)
 
-i pročitati [OR-mapiranje.pdf](https://github.com/katarinaa94/isa/blob/master/Vezbe3/OR-mapiranje.pdf) iz foldera _Vezbe3_.
+i pročitati [OR-mapiranje.pdf](https://github.com/katarinaa94/isa/blob/master/Vezbe3/OR-mapiranje.pdf) iz foldera _Vezbe4_.
 
 Takođe, u primeru se koristi [Postgres RDBMS](https://www.postgresql.org/) koji treba instalirati zajedno sa GUI okruženjem (pgAdmin Workbench) za lakši rad. Uputstva za instalaciju možete pronaći [ovde](https://www.youtube.com/watch?v=e1MwsT5FJRQ), [ovde](https://www.postgresql.org/docs/9.5/index.html) i [ovde](https://lmgtfy.com/?q=how+to+install+postgresql).
 
