@@ -52,4 +52,7 @@ public class StudentService {
 		return studentRepository.pronadjiStudentePoPrezimenu(prezime);
 	}
 	
+	public Student findOneWithExams(Long studentId) {
+		return studentRepository.findOneWithExams(studentId);
+	}
 }

@@ -40,8 +40,8 @@ public class ExamController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 
-		Student student = studentService.findOne(examDTO.getStudent().getId());
-		Course course = courseService.findOne(examDTO.getCourse().getId());
+		Student student = studentService.findOneWithExams(examDTO.getStudent().getId());
+		Course course = courseService.findOneWithExams(examDTO.getCourse().getId());
 
 		if (student == null || course == null) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -52,6 +52,8 @@ public class ExamController {
 		exam.setGrade(examDTO.getGrade());
 		exam.setStudent(student);
 		exam.setCourse(course);
+		course.addExam(exam);
+		student.addExam(exam);
 
 		exam = examService.save(exam);
 		return new ResponseEntity<>(new ExamDTO(exam), HttpStatus.CREATED);

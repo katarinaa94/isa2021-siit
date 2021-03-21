@@ -24,7 +24,7 @@ public class Course {
 	private Long id;
 
 	@Column(name = "name", nullable = false)
-	String name;
+	private String name;
 
 	@OneToMany(mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<Exam> exams = new HashSet<Exam>();
@@ -63,6 +63,16 @@ public class Course {
 
 	public void setExams(Set<Exam> exams) {
 		this.exams = exams;
+	}
+
+	public void addExam(Exam exam) {
+		exams.add(exam);
+		exam.setCourse(this);
+	}
+
+	public void removeExam(Exam exam) {
+		exams.remove(exam);
+		exam.setCourse(null);
 	}
 
 	@Override

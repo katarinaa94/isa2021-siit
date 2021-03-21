@@ -115,7 +115,7 @@ public class TeacherController {
 	@GetMapping(value = "/{teacherId}/courses")
 	public ResponseEntity<List<CourseDTO>> getTeacherCourses(@PathVariable Long teacherId) {
 
-		Teacher teacher = teacherService.findOne(teacherId);
+		Teacher teacher = teacherService.findOneWithCourses(teacherId);
 
 		Set<Course> courses = teacher.getCourses();
 		List<CourseDTO> coursesDTO = new ArrayList<>();

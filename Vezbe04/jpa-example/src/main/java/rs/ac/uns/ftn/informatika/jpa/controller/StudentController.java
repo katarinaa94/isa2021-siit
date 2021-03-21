@@ -171,7 +171,13 @@ public class StudentController {
 
 	@GetMapping(value = "/{studentId}/exams")
 	public ResponseEntity<List<ExamDTO>> getStudentExams(@PathVariable Long studentId) {
-		Student student = studentService.findOne(studentId);
+		
+		//traze se polozeni ispiti studenta, sto znaci da moramo uputiti JOIN FETCH upit
+		//kako bismo dobili sve trazene podatke
+		Student student = studentService.findOneWithExams(studentId);
+		
+		//ako je podesen fetchType LAZY i pozovemo findOne umesto findOneWithExams,
+		//na poziv getExams bismo dobili LazyInitializationException
 		Set<Exam> exams = student.getExams();
 		List<ExamDTO> examsDTO = new ArrayList<>();
 		for (Exam e : exams) {

@@ -1,8 +1,7 @@
 package rs.ac.uns.ftn.informatika.jpa.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,15 +21,16 @@ public class Exam {
 	private Integer grade;
 
 	@Column(name = "date", nullable = false)
-	private Date date;
+	private LocalDate date;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	//fetchtype EAGER je los za performanse, te ga treba koristiti samo kada je to neophodno
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Course course;
 
 	/*
 	 * Druga strana bidirekcione veze 1:n
 	 */
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Student student;
 
 	public Long getId() {
@@ -49,11 +49,11 @@ public class Exam {
 		this.grade = grade;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
@@ -72,4 +72,11 @@ public class Exam {
 	public void setStudent(Student student) {
 		this.student = student;
 	}
+
+	@Override
+	public String toString() {
+		return "Exam [id=" + id + ", grade=" + grade + ", date=" + date + "]";
+	}
+	
+	
 }

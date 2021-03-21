@@ -41,7 +41,7 @@ public class Student {
 	 * Kolona moze imati ime koje se razlikuje od naziva atributa.
 	 */
 	@Column(name = "indexNumber", unique = true, nullable = false)
-	String index;
+	private String index;
 
 	/*
 	 * Anotacija @Column oznacava da ce neki atribut biti kolona u tabeli
@@ -130,6 +130,19 @@ public class Student {
 	public void setExams(Set<Exam> exams) {
 		this.exams = exams;
 	}
+	
+	//kad god postoji bidirekciona veza, obe strane trebaju biti sinhronizovane
+	//kroz addChild i removeChild metode u roditeljskom entitetu 
+	public void addExam(Exam exam) {
+		exams.add(exam);
+		exam.setStudent(this);
+	}
+
+	public void removeExam(Exam exam) {
+		exams.remove(exam);
+		exam.setStudent(null);
+	}
+
 
 	@Override
 	public boolean equals(Object o) {
@@ -153,7 +166,6 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", index=" + index + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", exams=" + exams + "]";
+		return "Student [id=" + id + ", index=" + index + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 }

@@ -99,7 +99,7 @@ public class CourseController {
 	@GetMapping(value = "/{courseId}/exams")
 	public ResponseEntity<List<ExamDTO>> getStudentExams(@PathVariable Long courseId) {
 
-		Course course = courseService.findOne(courseId);
+		Course course = courseService.findOneWithExams(courseId);
 
 		Set<Exam> exams = course.getExams();
 		List<ExamDTO> examsDTO = new ArrayList<>();
@@ -110,6 +110,7 @@ public class CourseController {
 			examDTO.setGrade(e.getGrade());
 			examDTO.setDate(e.getDate());
 			examDTO.setStudent(new StudentDTO(e.getStudent()));
+			examDTO.setCourse(new CourseDTO(course));
 
 			examsDTO.add(examDTO);
 		}

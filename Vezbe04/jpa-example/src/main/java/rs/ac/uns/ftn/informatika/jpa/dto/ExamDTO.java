@@ -1,13 +1,13 @@
 package rs.ac.uns.ftn.informatika.jpa.dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import rs.ac.uns.ftn.informatika.jpa.model.Exam;
 
 public class ExamDTO {
 	private Long id;
 	private Integer grade;
-	private Date date;
+	private LocalDate date;
 	private CourseDTO course;
 	private StudentDTO student;
 
@@ -39,11 +39,11 @@ public class ExamDTO {
 		this.grade = grade;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 

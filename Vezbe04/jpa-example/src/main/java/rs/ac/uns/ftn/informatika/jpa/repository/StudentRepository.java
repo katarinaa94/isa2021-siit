@@ -41,7 +41,7 @@ import rs.ac.uns.ftn.informatika.jpa.model.Student;
  */
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-	Student findOneByIndex(String index);
+	public Student findOneByIndex(String index);
 
 	/*
 	 * Pronalazi sve objekte tipa Student i vraca onoliko objekata koliko je
@@ -51,7 +51,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 	 * http://docs.spring.io/autorepo/docs/spring-data-commons/1.10.0.RC1/api/org/
 	 * springframework/data/domain/PageRequest.html
 	 */
-	Page<Student> findAll(Pageable pageable);
+	public Page<Student> findAll(Pageable pageable);
 
 	/*
 	 * Ako se ne navede eksplicitni upit, Spring ce na osnovu imena metode napraviti
@@ -59,12 +59,12 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 	 * ovu metodu bi bio: select s from Student s where s.lastName = ?1 uz provere
 	 * da li se odgovarajuci atributi nalaze u datoj klasi.
 	 */
-	List<Student> findAllByLastName(String lastName);
+	public List<Student> findAllByLastName(String lastName);
 
 	/*
 	 * Vraca objekat po tacnom imenu i prezimenu ignorisuci mala i velika slova
 	 */
-	List<Student> findByFirstNameAndLastNameAllIgnoringCase(String firstName, String lastName);
+	public List<Student> findByFirstNameAndLastNameAllIgnoringCase(String firstName, String lastName);
 
 	/*
 	 * Primer eksplicitnog pisanja upita JPQL (Java Persistence Query Language)/ HQL
@@ -74,5 +74,10 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 	 * prezime.
 	 */
 	@Query("select s from Student s where s.lastName = ?1")
-	List<Student> pronadjiStudentePoPrezimenu(String prezime);
+	public List<Student> pronadjiStudentePoPrezimenu(String prezime);
+	
+	
+	//https://dzone.com/articles/how-to-decide-between-join-and-join-fetch
+	@Query("select s from Student s join fetch s.exams e where s.id =?1")
+	public Student findOneWithExams(Long studentId);
 }
