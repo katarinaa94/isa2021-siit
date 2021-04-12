@@ -197,23 +197,23 @@ Prethodno smo naveli primer web shop aplikacije koja razlikuje dva tipa korisnik
 
 ### GrantedAuthority
 
-_Spring Security_ razlikuje sledeće pojmove:
+_Spring Security_ poseduje sledeće pojmove (objedinjene pod pojmom __GrantedAuthority__):
 
-* _authority_ - predstavlja prava koja korisnik ima i
-* _role_ - predstavlja ulogu koju korisnik ima, sa prefiksom *ROLE_* koji _Spring Security_ sam dodaje.
+* _authority_ - predstavlja prava koja korisnik ima (fine grained permissions) i
+* _role_ - predstavlja ulogu koju korisnik ima, sa prefiksom *ROLE_* koji _Spring Security_ sam dodaje (coarse grained permissions).
 
 Predstavljene su interfejsom _GrantedAuthority_.
 
-U primeru, pogledati klasu **_Authority_** iz paketa _rs.ac.uns.ftn.informatika.spring.security.model_, koja je ujedno anotirana i _@Entity_ anotacijom. Klasa _User_ iz modela ima listu _authorities_, što znači da se one čuvaju u bazi. _Authority_-ji koji postoje u sistemu su u bazu dodati kroz skriptu za inicijalizaciju baze podataka _data-postgres.sql_.
+U primeru, pogledati klasu **_Role_** iz paketa _rs.ac.uns.ftn.informatika.spring.security.model_, koja je ujedno anotirana i _@Entity_ anotacijom. Klasa _User_ iz modela ima listu _roles_, što znači da se one čuvaju u bazi. _Role_ koje postoje u sistemu su u bazu dodati kroz skriptu za inicijalizaciju baze podataka _data-postgres.sql_.
 
 ```
 INSERT INTO ROLE (name) VALUES ('ROLE_USER');
 INSERT INTO ROLE (name) VALUES ('ROLE_ADMIN');
 ```
 
-_Authority_ se koristi na nivou URL-ova da se dodatno zaštite. Koriste se za one URL-ove koji su vezani za tip korisnika, odnosno tamo gde autentifikacija nije dovoljna.
+_GrantedAuthority_ se koristi na nivou URL-ova da se dodatno zaštite. Koriste se za one URL-ove koji su vezani za tip korisnika, odnosno tamo gde autentifikacija nije dovoljna.
 
-_Authority_-je definisane iznad možemo koristiti na sledeće načine:
+_GrantedAuthority_-je definisane iznad možemo koristiti na sledeće načine:
 
 1. metoda **hasAuthority()** upotrebom _Spring Security_ DSL-a:
 
