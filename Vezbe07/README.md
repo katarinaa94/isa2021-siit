@@ -238,6 +238,7 @@ Za malo kompleksnije upite ka bazi, metode repozitorijuma koje Hibernate koristi
 
 1. [Hibernate Second-Level Cache](https://www.baeldung.com/hibernate-second-level-cache)
 2. [Difference between First and Second Level Cache in Hibernate](https://javarevisited.blogspot.com/2017/03/difference-between-first-and-second-level-cache-in-Hibernate.html)
+3. [Spring cache annotations: some tips & tricks](https://www.foreach.be/blog/spring-cache-annotations-some-tips-tricks)
 
 ## Pokretanje Spring aplikacije (Eclipse)
 
