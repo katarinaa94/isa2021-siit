@@ -6,7 +6,7 @@ Za potrebe razumevanja primera potrebno je prethodno odgledati predavanja:
 - [Transakcije: pesimističko i optimističko zaključavanje](https://www.youtube.com/watch?v=NpJcBmR6G8I)
 
 i pročitati [Transakcije.pdf](https://github.com/katarinaa94/isa2021-siit/blob/master/Vezbe08/Transakcije.pdf) iz foldera Vezbe08.
-Podrazumeva se da ste upoznati sa gradivom predstavljenim u primerima sa [Vežbi 3](https://github.com/katarinaa94/isa2021-siit/tree/master/Vezbe04).
+Podrazumeva se da ste upoznati sa gradivom predstavljenim u primerima sa [Vežbi 4](https://github.com/katarinaa94/isa2021-siit/tree/master/Vezbe04).
 
 #### Konfiguracija projekta
 
