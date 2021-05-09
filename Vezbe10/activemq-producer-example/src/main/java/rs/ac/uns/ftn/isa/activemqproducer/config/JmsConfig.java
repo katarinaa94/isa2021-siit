@@ -40,7 +40,7 @@ public class JmsConfig {
 
     /*
      * Registrujemo bean JmsTemplate koji ce sluziti kao pomocna klasa koja uproscava sinhronizovani
-     * pristup Java Message Service-u (JMS) kao klijentu za Apache ActiveMQ za slanje i primanje poruka.
+     * pristup Java Message Service-u (JMS) za slanje i primanje poruka.
      */
     @Bean
     public JmsTemplate jmsTemplate(){
