@@ -169,7 +169,7 @@ Da bi se primer uspešno demonstrirao, neophodno je da _producer_ i _consumer_ b
 7. Pogledati ispis u konzoli _activemq-consumer-example_ aplikacije: `>> Message received: Hello, dear ActiveMQ Consumer!`
 8. Pogledati ispis u ActiveMQ konzoli (slika 6). Sada se vidi da je broj _consumer_-a 1, broj poruka koje su ušle u red je 2, kao i broj poruka koja su izašle iz reda, što znači da su obe poruke uspešno primljene.
 
-![Slika 4](https://i.ibb.co/xHxHKdD/activemq-publish.png "Slika 4")
+![Slika 4](https://i.imgur.com/r2w5gvZ.png "Slika 4")
 
 Slika 4
 
