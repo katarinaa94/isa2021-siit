@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.stereotype.Component;
-import rs.ac.uns.ftn.isa.redispubsub.controller.RedisController;
 
 import java.util.ArrayList;
 import java.util.List;
