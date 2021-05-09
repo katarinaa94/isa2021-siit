@@ -114,7 +114,7 @@ Slika 3
 
 ### Apache ActiveMQ
 
-Primer komunikacije zasnovane na razmeni poruka između dve Spring aplikacije i rada sa [Apache ActiveMQ](https://activemq.apache.org/) nalaze se u _activemq-producer-example_ i _activemq-consumer-example_ projektima. Apache ActiveMQ je _open source message broker_ napisan u Java programskom jeziku koji u navedenim primerima koristimo zajedno sa [Java Message Service (JMS)](https://www.oracle.com/java/technologies/java-message-service.html) klijentom. Za pokretanje primera potrebno je instalirati [Apache ActiveMQ](https://activemq.apache.org/components/classic/download/). Kada se server instalira potrebno ga je startovati.
+Primer komunikacije zasnovane na razmeni poruka između dve Spring aplikacije i rada sa [Apache ActiveMQ](https://activemq.apache.org/) nalaze se u _activemq-producer-example_ i _activemq-consumer-example_ projektima. Apache ActiveMQ je _open source message broker_ napisan u Java programskom jeziku koji u navedenim primerima koristimo zajedno sa klijentom koji je implementiran u skladu sa [Java Message Service (JMS)](https://www.oracle.com/java/technologies/java-message-service.html) API specifikacijom. Za pokretanje primera potrebno je instalirati [Apache ActiveMQ](https://activemq.apache.org/components/classic/download/). Kada se server instalira potrebno ga je startovati.
 
 Podrška za korišćenje ActiveMQ u Spring aplikaciji se može uključiti dodavanjem odgovarajuće zavisnosti u `pom.xml`:
 
@@ -169,13 +169,13 @@ Da bi se primer uspešno demonstrirao, neophodno je da _producer_ i _consumer_ b
 7. Pogledati ispis u konzoli _activemq-consumer-example_ aplikacije: `>> Message received: Hello, dear ActiveMQ Consumer!`
 8. Pogledati ispis u ActiveMQ konzoli (slika 6). Sada se vidi da je broj _consumer_-a 1, broj poruka koje su ušle u red je 2, kao i broj poruka koja su izašle iz reda, što znači da su obe poruke uspešno primljene.
 
-![Slika 4](https://ibb.co/X8c8fMb "Slika 4")
+![Slika 4](https://i.ibb.co/xHxHKdD/activemq-publish.png "Slika 4")
 Slika 4
 
-![Slika 5](https://ibb.co/Jm7Kyvw "Slika 5")
+![Slika 5](https://i.ibb.co/FmwK05L/nema-consumera.png "Slika 5")
 Slika 5
 
-![Slika 6](https://ibb.co/j64TwC6 "Slika 6")
+![Slika 6](https://i.ibb.co/vwzHdNw/dve-poruke-jedan-consumer.png "Slika 6")
 Slika 6
 
 ### Redis
@@ -184,12 +184,12 @@ Primer komunikacije zasnovane na razmeni poruka unutar jedne Spring aplikacije i
 
 Startovanjem Redis servera - pokretanjem `redis-server.exe`, otvara se njegova konzola:
 
-![slika-redis-server](https://ibb.co/DG9TT7q "Slika 7 - redis-server")
+![slika-redis-server](https://i.ibb.co/GsWNNVh/redis-server.png "Slika 7 - redis-server")
 Slika 7 - konzola pokrenutog Redis servera
 
 Za potrebe monitoringa razmene poruka potrebno je pokrenuti `redis-cli.exe`. Komandom `monitor` obezbeđuje se monitoring razmenjenih poruka:
 
-![slika-redis-cli](https://ibb.co/crHh2mw "Slika 8 - redis-cli")
+![slika-redis-cli](https://i.ibb.co/yQ1Fg3p/redis-cli-monitor.png "Slika 8 - redis-cli")
 Slika 8 - redis-cli konzola sa `monitor` komandom
 
 Podrška za korišćenje Redis u Spring aplikaciji se može uključiti dodavanjem odgovarajuće zavisnosti u `pom.xml`:
@@ -249,11 +249,11 @@ Klasa _RedisController_ je REST _controller_ sa dva _endpoint_-a:
 5. Pogledati ispis u _redis-cli_ konzoli (slika 10). U konzoli se vidi na koji _topic_ smo _subscribe_-ovani i koje poruke su _publish_-ovane.
 6. Preko _Postman_-a poslati _GET_ zahtev kako bi se izlistale sve poruke _subscriber_-a (slika 11).
 
-![Slika 9](https://ibb.co/pvChXc3 "Slika 9")
+![Slika 9](https://i.ibb.co/MDqBNrR/hello-again.png "Slika 9")
 Slika 9
 
-![Slika 10](https://ibb.co/TKCzR1r "Slika 10")
+![Slika 10](https://i.ibb.co/28bXPS5/publish-message.png "Slika 10")
 Slika 10
 
-![Slika 11](https://ibb.co/74XRx6s "Slika 11")
+![Slika 11](https://i.ibb.co/4d7Yw5h/all-messages.png "Slika 11")
 Slika 11
