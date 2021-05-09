@@ -169,15 +169,15 @@ Da bi se primer uspešno demonstrirao, neophodno je da _producer_ i _consumer_ b
 7. Pogledati ispis u konzoli _activemq-consumer-example_ aplikacije: `>> Message received: Hello, dear ActiveMQ Consumer!`
 8. Pogledati ispis u ActiveMQ konzoli (slika 6). Sada se vidi da je broj _consumer_-a 1, broj poruka koje su ušle u red je 2, kao i broj poruka koja su izašle iz reda, što znači da su obe poruke uspešno primljene.
 
-![Slika 4](https://i.imgur.com/r2w5gvZ.png "Slika 4")
+![Slika 4](https://i.imgur.com/vvFU7eb.png "Slika 4")
 
 Slika 4
 
-![Slika 5](https://i.ibb.co/FmwK05L/nema-consumera.png "Slika 5")
+![Slika 5](https://i.imgur.com/HV6U9dm.png "Slika 5")
 
 Slika 5
 
-![Slika 6](https://i.ibb.co/vwzHdNw/dve-poruke-jedan-consumer.png "Slika 6")
+![Slika 6](https://i.imgur.com/3xPikmg.png "Slika 6")
 
 Slika 6
 
@@ -187,13 +187,13 @@ Primer komunikacije zasnovane na razmeni poruka unutar jedne Spring aplikacije i
 
 Startovanjem Redis servera - pokretanjem `redis-server.exe`, otvara se njegova konzola:
 
-![slika-redis-server](https://i.ibb.co/GsWNNVh/redis-server.png "Slika 7 - redis-server")
+![slika-redis-server](https://i.imgur.com/cp1bs3h.png "Slika 7 - redis-server")
 
 Slika 7 - konzola pokrenutog Redis servera
 
 Za potrebe monitoringa razmene poruka potrebno je pokrenuti `redis-cli.exe`. Komandom `monitor` obezbeđuje se monitoring razmenjenih poruka:
 
-![slika-redis-cli](https://i.ibb.co/yQ1Fg3p/redis-cli-monitor.png "Slika 8 - redis-cli")
+![slika-redis-cli](https://i.imgur.com/BafK9rT.png "Slika 8 - redis-cli")
 
 Slika 8 - redis-cli konzola sa `monitor` komandom
 
@@ -254,14 +254,14 @@ Klasa _RedisController_ je REST _controller_ sa dva _endpoint_-a:
 5. Pogledati ispis u _redis-cli_ konzoli (slika 10). U konzoli se vidi na koji _topic_ smo _subscribe_-ovani i koje poruke su _publish_-ovane.
 6. Preko _Postman_-a poslati _GET_ zahtev kako bi se izlistale sve poruke _subscriber_-a (slika 11).
 
-![Slika 9](https://i.ibb.co/MDqBNrR/hello-again.png "Slika 9")
+![Slika 9](https://i.imgur.com/zbv0oaL.png "Slika 9")
 
 Slika 9
 
-![Slika 10](https://i.ibb.co/28bXPS5/publish-message.png "Slika 10")
+![Slika 10](https://i.imgur.com/xjFFvol.png "Slika 10")
 
 Slika 10
 
-![Slika 11](https://i.ibb.co/4d7Yw5h/all-messages.png "Slika 11")
+![Slika 11](https://i.imgur.com/zIYx4rc.png "Slika 11")
 
 Slika 11
