@@ -15,3 +15,9 @@ Snimak treba okačiti na Youtube i link poslati na email stojkovm@uns.ac.rs sa i
 Linkove treba poslati najkasnije do 2.5.2021. u 11:59:59 (podne).
 Raspored prezentovanja biće okačen u toku srede 2.5.2021.
 Kašnjenje se neće tolerisati.
+
+
+
+Obaveštavaju se studenti da je rok za završetak projekta 15.6.2021. do 23:59:59.
+Naknadne aktivnosti na Trellu i GitHubu neće biti tolerisane.
+Uputstva o odbrani projekta biće objavljena naknadno.
