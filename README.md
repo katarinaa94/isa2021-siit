@@ -17,7 +17,12 @@ Raspored prezentovanja biće okačen u toku srede 2.6.2021.
 Kašnjenje se neće tolerisati.
 
 
-
+<br>
 Obaveštavaju se studenti da je rok za završetak projekta 15.6.2021. do 23:59:59.
 Naknadne aktivnosti na Trellu i GitHubu neće biti tolerisane.
 Uputstva o odbrani projekta biće objavljena naknadno.
+
+<br>
+<h2>Termini odbrane - jun </h2>
+Odbrana projekata će se održati u sredu 16.6.2021. u NTP 324.
+Na [linku](https://github.com/katarinaa94/isa2021-siit/blob/master/ISA%20RA%20II%20jun.pdf) su dati predlozi ocena koje studenti brane. Prisustvo je obavezno.
